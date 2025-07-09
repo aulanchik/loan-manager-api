@@ -6,7 +6,9 @@ A simple API built with FastAPI for processing and managing loan applications. I
 *   **Loan Application Submission**: Endpoint to apply for a new loan.
 *   **Application Retrieval**: Endpoints to list all submitted applications or retrieve applications by a specific personal ID.
 *   **Blacklist**: Rejects applications from predefined blacklisted personal IDs.
-*   **Rate Limiting**: Implements a simple in-memory rate limiter that restricts requests to 3 per second from the same country. The country is identified via the client's IP address using the `ip-api.com` service.
+*   **Rate Limiting**: Implements a simple in-memory rate limiter that restricts requests to **3 per second from the same country**.
+
+FYI: The country is identified via the client's IP address using the `ip-api.com` service. If the IP geolocation service is unavailable or fails, the system defaults to country code `"GB"`.
 
 ## Getting Started
 
