@@ -1,0 +1,13 @@
+[project]
+name = "loan-manager"
+version = "0.1.0"
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "httpx",
+    "pytest",
+]
+requires-python = ">=3.8"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
