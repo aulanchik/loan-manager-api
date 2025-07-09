@@ -8,7 +8,7 @@ def is_blacklisted(personal_id: str) -> bool:
     return personal_id in _blacklist
 
 def store_loan(app: LoanApplication, country: str):
-    _loans.append({"application": app.dict(), "country": country})
+    _loans.append({"application": app.model_dump(), "country": country})
 
 def get_all_loans():
     return _loans
